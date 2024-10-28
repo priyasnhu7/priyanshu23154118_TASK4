@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/Todolist.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -51,10 +51,7 @@ class _HomePageState extends State<HomePage> {
         itemCount: toDoList.length,
         itemBuilder: (BuildContext context, index) {
           return TodoList(
-            taskName: toDoList[index][0],
-            taskCompleted: toDoList[index][1],
-            onChanged: (value) => checkBoxChanged(index),
-            deleteFunction: (contex) => deleteTask(index),
+          
           );
         },
       ),
@@ -98,5 +95,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-  
- 
+}
