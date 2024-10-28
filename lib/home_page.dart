@@ -51,7 +51,10 @@ class _HomePageState extends State<HomePage> {
         itemCount: toDoList.length,
         itemBuilder: (BuildContext context, index) {
           return TodoList(
-          
+            taskName: toDoList[index][0],
+            taskCompleted: toDoList[index][1],
+            onChanged: (value) => checkBoxChanged(index),
+            deleteFunction: (contex) => deleteTask(index),
           );
         },
       ),
